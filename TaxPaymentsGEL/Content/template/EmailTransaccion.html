@@ -1,0 +1,137 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Tabla PDF</title>
+</head>
+
+<body>
+
+    <table id="pageContainer" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style=" background: #f4f4f4; border-collapse:collapse; text-align:left;">
+        <tbody>
+            <tr>
+                <td style="padding-top:30px; padding-bottom:30px;">
+                    <table width="600" align="center" cellpadding="0" cellspacing="0" style=" background: #fff; border-collapse:collapse; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:11px; line-height:100%; color:#777777;">
+                        <tbody>
+                            <!--<tr>
+                                <td style="padding-bottom:10px;padding-top: 10px;padding-right: 10px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:11px;line-height:100%;color:#777777;text-align:right;"> ¿Tiene problemas para ver este e-mail? <a style="text-decoration:underline;color: rgb(0, 67, 136);" href="#">Clic aquí para ver en línea</a>. </td>
+                            </tr>-->
+                        </tbody>
+                    </table>
+                    
+                    <table bgcolor="#ffffff" width="600" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse; text-align:left; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight:normal; font-size:12px; line-height:15pt; color:#777777;">
+                        <tbody>
+                            <tr>
+                                <td width="270" valign="middle" style="padding-top: 25px;padding-left: 25px;padding-bottom: 25px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:15pt;text-align:center;"> <img alt="Logo" src="{1cero1}" align="left" border="0" vspace="0" hspace="0" style="display:block;">
+                                    <span class="highlighted" style="font-size: 20px; line-height: 24px; color: rgb(102, 102, 102); display: block; padding-top: 60px;">Notificación</span>
+                                    <span class="highlighted" style="color: rgb(153, 153, 153); font-size: 17px;">de transacciones</span>
+                                </td>
+                                
+                                <td width="270" valign="middle" style=" font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height:15pt; color:#39a878;"> <img alt="Logo" src="{imgcolombia}" align="left" border="0" vspace="0" hspace="0" style="display:block;"> </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                    <table bgcolor="#ffffff" width="600" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse; text-align:left; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight:normal; font-size:12px; line-height:15pt; color:#777777;">
+                        <tbody>
+                            <tr>
+                                <td width="600" colspan="2" style="padding-top:20px; padding-right:30px; padding-left:30px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height:15pt; color:#777777;">
+                                    <h2 style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding-left: 24px; font-size: 18px; line-height: 27pt; color: #555555; font-weight: 600; margin-top: 0; margin-bottom: 15px !important; padding: 0; ">Apreciado cliente</h2> </td>
+                            </tr>
+                            <tr>
+                                <td width="32" style="padding-left:10px; padding-right: 10px;">
+                                    <img src="{verify}">
+                                </td>
+                                <td style="padding-right:30px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height:15pt; color:#777777; text-align:justify;">
+                                    De acuerdo con la solicitud realizada por usted, le comunicamos las novedades que se presentan con sus pagos
+                                    <table align="center" border="0" cellpadding="1" cellspacing="2" style=" padding-top: 10px;">
+                                        <thead>
+                                            <tr>
+                                                <th bgcolor="#cccccc" colspan="2" height="30" style="font-size: 12pt; color: rgb(0,0,0); font-family: Verdana">DATOS DEL PAGO</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td width="32%" style="font-size: 10pt; color: rgb(0,0,0); font-family: Verdana">
+                                                    <b>Estado de la transacción:</b>
+                                                </td>
+                                                <td width="68%" style="font-size: 10pt; color: rgb(0,0,0); font-family: Verdana">{EstadoTransaccion}</td>
+                                            </tr>
+                                            <tr>
+                                                <td bgcolor="#dedede" style="font-size: 10pt; color: rgb(0,0,0); font-family: Verdana"><b>Nit del Municipio:</b></td>
+                                                <td bgcolor="#dedede" style="font-size: 10pt; color: rgb(0,0,0); font-family: Verdana">{NitMunicipio}</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-size: 10pt; color: rgb(0,0,0); font-family: Verdana"><b>Nombre del Municipio:</b></td>
+                                                <td style="font-size: 10pt; color: rgb(0,0,0); font-family: Verdana">{NombreMunicipio}</td>
+                                            </tr>
+                                            <tr>
+                                                <td bgcolor="#dedede" style="font-size: 10pt; color: rgb(0,0,0); font-family: Verdana"><b>Valor de transacción:</b></td>
+                                                <td bgcolor="#dedede" style="font-size: 10pt; color: rgb(0,0,0); font-family: Verdana">{ValorTransaccion}</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-size: 10pt; color: rgb(0,0,0); font-family: Verdana"><b>Fecha de la transacción:</b></td>
+                                                <td style="font-size: 10pt; color: rgb(0,0,0); font-family: Verdana">{FechaTransaccion}</td>
+                                            </tr>
+                                            <tr>
+                                                <td bgcolor="#dedede" style="font-size: 10pt; color: rgb(0,0,0); font-family: Verdana"><b>Banco:</b>:</td>
+                                                <td bgcolor="#dedede" style="font-size: 10pt; color: rgb(0,0,0); font-family: Verdana">{Banco}</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-size: 10pt; color: rgb(0,0,0); font-family: Verdana"><b>Transacción/CUS:</b></td>
+                                                <td style="font-size: 10pt; color: rgb(0,0,0); font-family: Verdana">{Transacción/CUS}</td>
+                                            </tr>
+                                            <tr>
+                                                <td bgcolor="#dedede" style="font-size: 10pt; color: rgb(0,0,0); font-family: Verdana"><b>Número de factura:<b /></td>
+                                                <td bgcolor="#dedede" style="font-size: 10pt; color: rgb(0,0,0); font-family: Verdana">{NumFactura}</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-size: 10pt; color: rgb(0,0,0); font-family: Verdana"><b>Descripción del pago<b /></td>
+                                                <td style="font-size: 10pt; color: rgb(0,0,0); font-family: Verdana">{DescripcionPago}</td>
+                                            </tr>
+                                            <tr>
+                                                <td bgcolor="#dedede" style="font-size: 10pt; color: rgb(0,0,0); font-family: Verdana"><b>Referencia 1</b></td>
+                                                <td bgcolor="#dedede" style="font-size: 10pt; color: rgb(0,0,0); font-family: Verdana">{Referencia1}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td width="600" colspan="2" height="31" style="padding-top:5px; font-size:2px; line-height:0px;"><img alt="" src="http://gifky.com/image.axd?picture=RocketMail/Green/divider.png" height="31" width="600" align="left" border="0" vspace="0" hspace="0" style="display:block;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table width="600" bgcolor="#f4f4f4" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse; text-align:left; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight:normal; font-size:12px; line-height:15pt; color:#777777;">
+                        <tbody>
+                            <tr>
+                                <td style="padding-top:20px;padding-bottom:12px;padding-left: 15px;padding-right: 15px;font-size: 11px;line-height: 15px;text-align: center;color: rgb(119, 119, 119);/* font-style: italic; */">Comuníquese con nuestra línea Telefónica al {TelefonoMunicipio}<br>en caso de recibir una alerta o notificación <br>de una transacción que presenta alguna irregularidad.</td>
+                                
+                            </tr>
+                            <tr>
+                                <td width="600" colspan="2" height="10" style="font-size:2px; line-height:0px;"><img alt="" src="http://gifky.com/image.axd?picture=RocketMail/Green/divider2.png" height="10" width="600" align="left" border="0" vspace="0" hspace="0" style="display:block;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table width="600" align="center" cellpadding="0" cellspacing="0" style="background: #fff;border-collapse:collapse;text-align:left;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:normal;font-size:12px;line-height:15pt;color:#777777;">
+                        <tbody>
+                            
+                            
+                            
+                            <!--<tr>
+                                <td width="600" colspan="7" style="padding-bottom: 10px;padding-left:20px;padding-right:20px;padding-top: 10px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 9px;line-height: 15px;color: rgba(119, 119, 119, 0.7);text-align:center;"> Bancolombia nunca le solicitará sus datos personales o de sus productos bancarios mediante vínculos de correo electrónico.<br>
+En caso de recibir alguno, repórtelo de inmediato a correosospechoso@bancolombia•com </td>
+                            </tr>-->
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

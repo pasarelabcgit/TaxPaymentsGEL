@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8A1EE3B8-8446-4DAC-BB8A-AB45A12B8439}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TaxPaymentsGEL</RootNamespace>
+    <AssemblyName>TaxPaymentsGEL</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=15.1.2.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.15.1.2.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Business, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages Manuales\Business.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages Manuales\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DBConnection, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages Manuales\DBConnection.dll</HintPath>
+    </Reference>
+    <Reference Include="FinalizeTransactionPayment, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages Manuales\FinalizeTransactionPayment.dll</HintPath>
+    </Reference>
+    <Reference Include="LogException, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages Manuales\LogException.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NotificationBusiness, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages Manuales\NotificationBusiness.dll</HintPath>
+    </Reference>
+    <Reference Include="PaymentBusiness, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages Manuales\PaymentBusiness.dll</HintPath>
+    </Reference>
+    <Reference Include="PaymentEntities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages Manuales\PaymentEntities.dll</HintPath>
+    </Reference>
+    <Reference Include="Select.HtmlToPdf, Version=2.2.0.0, Culture=neutral, PublicKeyToken=e0ae9f6e27a97018, processorArchitecture=MSIL">
+      <HintPath>..\packages\Select.HtmlToPdf.2.2.0.0\lib\net40\Select.HtmlToPdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WompiBusiness, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages Manuales\WompiBusiness.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assetsPayment\css\animate.min.css" />
+    <Content Include="assetsPayment\css\bootstrap.min.css" />
+    <Content Include="assetsPayment\css\jquery.mb.YTPlayer.min.css" />
+    <Content Include="assetsPayment\css\magnific-popup.css" />
+    <Content Include="assetsPayment\css\owl.carousel.min.css" />
+    <Content Include="assetsPayment\css\owl.theme.default.min.css" />
+    <Content Include="assetsPayment\css\responsive.css" />
+    <Content Include="assetsPayment\css\style.css" />
+    <Content Include="assetsPayment\css\themify-icons.css" />
+    <Content Include="assetsPayment\fonts\themify.svg" />
+    <Content Include="assetsPayment\js\bootstrap.min.js" />
+    <Content Include="assetsPayment\js\jquery-3.5.0.min.js" />
+    <Content Include="assetsPayment\js\jquery.countdown.min.js" />
+    <Content Include="assetsPayment\js\jquery.easing.min.js" />
+    <Content Include="assetsPayment\js\jquery.magnific-popup.min.js" />
+    <Content Include="assetsPayment\js\jquery.mb.YTPlayer.min.js" />
+    <Content Include="assetsPayment\js\owl.carousel.min.js" />
+    <Content Include="assetsPayment\js\popper.min.js" />
+    <Content Include="assetsPayment\js\scripts.js" />
+    <Content Include="assetsPayment\js\validator.min.js" />
+    <Content Include="assetsPayment\js\wow.min.js" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\img\Logo_Soacha.png" />
+    <Content Include="Content\js\APIWompi.js" />
+    <Content Include="Pages\ResponsePaymentCard.aspx" />
+    <Content Include="Pages\ResponsePaymentV2.aspx" />
+    <Content Include="Pages\Tax_PaymentsV2.aspx" />
+    <Content Include="SitePayments.Master" />
+    <Content Include="assetsPayment\fonts\themify.eot" />
+    <Content Include="assetsPayment\fonts\themify.ttf" />
+    <Content Include="assetsPayment\fonts\themify.woff" />
+    <Content Include="assetsPayment\libs\contact-form-process.php" />
+    <Content Include="assetsPayment\libs\quote-form-process.php" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\TaxPaymentGEL.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\WSGiron\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+    </Content>
+    <None Include="Web References\WSGiron\ws_siim.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="wse3policyCache.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\cssjquery.css" />
+    <Content Include="Content\css\datepicker.css" />
+    <Content Include="Content\css\jAlert-v3.css" />
+    <Content Include="Content\css\jquery.dataTables.min.css" />
+    <Content Include="Content\css\lobibox.css" />
+    <Content Include="Content\css\lobibox.min.css" />
+    <Content Include="Content\css\pasarela.css" />
+    <Content Include="Content\EscudosMunicipios\Escudo-Municipio-acevedo.png" />
+    <Content Include="Content\EscudosMunicipios\Escudo-Municipio-acueducto-villavicencio.png" />
+    <Content Include="Content\EscudosMunicipios\Escudo-Municipio-amaga.png" />
+    <Content Include="Content\EscudosMunicipios\Escudo-Municipio-carepa.png" />
+    <Content Include="Content\EscudosMunicipios\Escudo-Municipio-elcarmen.png" />
+    <Content Include="Content\EscudosMunicipios\Escudo-Municipio-los patios.png" />
+    <Content Include="Content\EscudosMunicipios\Escudo-Municipio-planeta-rica.png" />
+    <Content Include="Content\EscudosMunicipios\Escudo-Municipio-tolu.png" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\img\101.png" />
+    <Content Include="Content\img\1cero1.png" />
+    <Content Include="Content\img\404-01.jpg" />
+    <Content Include="Content\img\Alert.png" />
+    <Content Include="Content\img\bancolombia-logo.png" />
+    <Content Include="Content\img\bancolombia.jpg" />
+    <Content Include="Content\img\bancolombia.png" />
+    <Content Include="Content\img\bg.jpg" />
+    <Content Include="Content\img\colombia.png" />
+    <Content Include="Content\img\Error.png" />
+    <Content Include="Content\img\escudo_colombia.png" />
+    <Content Include="Content\img\favicon.ico" />
+    <Content Include="Content\img\ImgPSE.png" />
+    <Content Include="Content\img\informacion.png" />
+    <Content Include="Content\img\loading.gif" />
+    <Content Include="Content\img\logo-alcaldia.png" />
+    <Content Include="Content\img\Logo101P.png" />
+    <Content Include="Content\img\mexico.png" />
+    <Content Include="Content\img\PSE.png" />
+    <Content Include="Content\img\pse1.png" />
+    <Content Include="Content\img\Search.png" />
+    <Content Include="Content\img\SearchT.png" />
+    <Content Include="Content\img\verify.jpg" />
+    <Content Include="Content\js\bootstrap-datepicker.js" />
+    <Content Include="Content\js\bootstrap.js" />
+    <Content Include="Content\js\jAlert-functions.js" />
+    <Content Include="Content\js\jAlert-v3.js" />
+    <Content Include="Content\js\jquery-1.11.3.min.js" />
+    <Content Include="Content\js\jquery-2.1.4.min.js" />
+    <Content Include="Content\js\jquery.dataTables.min.js" />
+    <Content Include="Content\js\lobibox.js" />
+    <Content Include="Content\js\lobibox.min.js" />
+    <Content Include="Content\js\Pasarela.js" />
+    <Content Include="Content\js\ValidarDatos.js" />
+    <Content Include="Content\template\DetalleTransaccion.html" />
+    <Content Include="Content\template\EmailTransaccion.html" />
+    <Content Include="ErrorPages\Oops.aspx" />
+    <Content Include="ErrorPages\PageNotFoundError.aspx" />
+    <Content Include="Pages\DetailTransactions.aspx" />
+    <Content Include="Pages\Test.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ErrorPages\Oops.aspx.cs">
+      <DependentUpon>Oops.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPages\Oops.aspx.designer.cs">
+      <DependentUpon>Oops.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPages\PageNotFoundError.aspx.cs">
+      <DependentUpon>PageNotFoundError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPages\PageNotFoundError.aspx.designer.cs">
+      <DependentUpon>PageNotFoundError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DetailTransactions.aspx.cs">
+      <DependentUpon>DetailTransactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\DetailTransactions.aspx.designer.cs">
+      <DependentUpon>DetailTransactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ResponsePaymentCard.aspx.cs">
+      <DependentUpon>ResponsePaymentCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ResponsePaymentCard.aspx.designer.cs">
+      <DependentUpon>ResponsePaymentCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ResponsePaymentV2.aspx.cs">
+      <DependentUpon>ResponsePaymentV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ResponsePaymentV2.aspx.designer.cs">
+      <DependentUpon>ResponsePaymentV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tax_PaymentsV2.aspx.cs">
+      <DependentUpon>Tax_PaymentsV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Tax_PaymentsV2.aspx.designer.cs">
+      <DependentUpon>Tax_PaymentsV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SitePayments.Master.cs">
+      <DependentUpon>SitePayments.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SitePayments.Master.designer.cs">
+      <DependentUpon>SitePayments.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://181.143.219.235/siimpel/wssiim/ws_siim.php%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSGiron\</RelPath>
+      <UpdateFromURL>http://181.143.219.235/siimpel/wssiim/ws_siim.php%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49971</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49971/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Select.HtmlToPdf.2.2.0.0\build\Select.HtmlToPdf.targets" Condition="Exists('..\packages\Select.HtmlToPdf.2.2.0.0\build\Select.HtmlToPdf.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Select.HtmlToPdf.2.2.0.0\build\Select.HtmlToPdf.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Select.HtmlToPdf.2.2.0.0\build\Select.HtmlToPdf.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
