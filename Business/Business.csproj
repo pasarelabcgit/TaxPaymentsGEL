@@ -30,12 +30,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Business">
+      <HintPath>..\Packages Manuales\Business.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper">
+      <HintPath>..\Packages Manuales\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DBConnection">
+      <HintPath>..\Packages Manuales\DBConnection.dll</HintPath>
+    </Reference>
     <Reference Include="FinalizeTransactionPayment, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\3-DLL\FinalizeTransactionPayment\FinalizeTransactionPayment\bin\Debug\FinalizeTransactionPayment.dll</HintPath>
+      <HintPath>..\Packages Manuales\FinalizeTransactionPayment.dll</HintPath>
     </Reference>
     <Reference Include="LogException">
-      <HintPath>..\..\..\3-DLL\LogException\LogException\bin\Debug\LogException.dll</HintPath>
+      <HintPath>..\Packages Manuales\LogException.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.Services3">
       <HintPath>..\..\..\3-DLL\PSEPayment\PSEPayment\bin\Debug\Microsoft.Web.Services3.dll</HintPath>
@@ -44,21 +53,24 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\3-DLL\LogException\LogException\bin\Debug\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="NotificationBusiness">
+      <HintPath>..\Packages Manuales\NotificationBusiness.dll</HintPath>
+    </Reference>
     <Reference Include="PaymentBusiness, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\3-DLL\PaymentBusiness\PaymentBusiness\bin\Debug\PaymentBusiness.dll</HintPath>
+      <HintPath>..\Packages Manuales\PaymentBusiness.dll</HintPath>
     </Reference>
     <Reference Include="PaymentEntities">
-      <HintPath>..\..\..\3-DLL\PaymentEntities\PaymentEntities\bin\Debug\PaymentEntities.dll</HintPath>
+      <HintPath>..\Packages Manuales\PaymentEntities.dll</HintPath>
     </Reference>
     <Reference Include="PSEPayment">
-      <HintPath>..\..\..\3-DLL\PSEPayment\PSEPayment\bin\Debug\PSEPayment.dll</HintPath>
+      <HintPath>..\Packages Manuales\PSEPayment.dll</HintPath>
     </Reference>
     <Reference Include="PSEWebServicesClient3">
-      <HintPath>..\..\..\3-DLL\PSEPayment\PSEPayment\bin\Debug\PSEWebServicesClient3.dll</HintPath>
+      <HintPath>..\Packages Manuales\PSEWebServicesClient3.dll</HintPath>
     </Reference>
-    <Reference Include="RestSharp">
-      <HintPath>..\..\..\3-DLL\NotificationBusiness\NotificationBusiness\bin\Debug\RestSharp.dll</HintPath>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net46\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -69,10 +81,13 @@
     <Reference Include="System.Xml" />
     <Reference Include="TransactionNotification, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\3-DLL\TransactionNotification\TransactionNotification\bin\Debug\TransactionNotification.dll</HintPath>
+      <HintPath>..\Packages Manuales\TransactionNotification.dll</HintPath>
     </Reference>
     <Reference Include="UserDBGELBusiness">
-      <HintPath>..\..\..\..\..\3-DLLO SG-INFO\1-SG-INFO-1CERO1\DLL\UserDBGELBusiness\UserDBGELBusiness\bin\Debug\UserDBGELBusiness.dll</HintPath>
+      <HintPath>..\Packages Manuales\UserDBGELBusiness.dll</HintPath>
+    </Reference>
+    <Reference Include="WompiBusiness">
+      <HintPath>..\Packages Manuales\WompiBusiness.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +102,9 @@
     <Compile Include="ResponseCreateTransaction.cs" />
     <Compile Include="ResponseTransactionInformacion.cs" />
     <Compile Include="UserDBGELBusiness.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
